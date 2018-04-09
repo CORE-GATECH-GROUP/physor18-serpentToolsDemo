@@ -1,0 +1,5 @@
+xs:
+    variableGroups: [xs, eig]
+    variableExtras: [INF_FLX]
+depletion.metadataKeys: [NAMES, ZAI, DAYS]
+
