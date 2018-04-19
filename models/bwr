@@ -146,25 +146,20 @@ therm lwtr lwe7.12t
 % - Detector
 
 ene twoGrp 4 default2
-ene fineGrp 4 nj2
+ene fineGrp 4 scale238
 
 det xymesh 
 de twoGrp 
 dx -7.6 7.6 20
 dy -7.6 7.6 20
 
-mat u5 1 92235.06c 1
-
 det spectrum
 de fineGrp
 dr -1 void
-dr 18 u5
 
-det mixed
-de twoGrp
-dx -7.6 7.6 10
-dr 18 u5
-dr 16 u5
+det xyOneGroupMesh
+dx -7.6 7.6 20
+dy -7.6 7.6 20
 
 set gcu 0
 

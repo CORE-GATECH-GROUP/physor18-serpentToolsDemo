@@ -19,3 +19,7 @@ __pycache__/
 *.blg
 
 .*.swp
+
+# ignore the sampled files
+models/sampled-depletion-files/
+models/sampled-bwr/

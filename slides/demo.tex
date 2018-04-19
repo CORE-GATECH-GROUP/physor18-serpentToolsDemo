@@ -1,0 +1,50 @@
+% demo slides for beamer presentation
+\begin{frame}{Jupyter notebooks}
+    \begin{itemize}
+        \input{./demo-repo.tex}
+        \item Examples in manual: \url{http://serpent-tools.readthedocs.io/en/latest/examples/index.html}
+        \item Utilizes jupyter notebooks\footnotemark[1]
+            \begin{itemize}
+                \item Interactive python sessions
+                \item More at \url{https://jupyter.org/install}
+            \end{itemize}
+    \end{itemize}
+    \footnotetext[1]{\cite{Kluyver:2016aa}}
+\end{frame}
+
+\subsection{Detector files}
+\begin{frame}{Detector file}
+    \begin{itemize}
+        \item \toapi{detector}{serpentTools.parsers.detector}{DetectorReader} objects used to parse detector files
+        \item Support detectors with complex bin structures
+            \begin{itemize}
+                \item energy groups, reactions, Cartesian mesh, etc
+            \end{itemize}
+        \item Detector data is stored in \toapi{containers}{serpentTools.objects.containers}{Detector} objects
+        \item Simple spectral and mesh plot routines
+        \item Read multiple files using \toapi{samplers}{serpentTools.samplers.detector}{DetectorSampler}
+    \end{itemize}
+\end{frame}
+
+\subsection{Depletion files}
+\begin{frame}{Depleted material files}
+    \begin{itemize}
+        \item Parse through the file with a \toapi{depletion}{serpentTools.parsers.depletion}{DepletionReader}
+        \item Store metadata such as isotopes, and burnup schedule
+        \item Option to store select materials and/or select variables
+            \begin{itemize}
+                \item store atomic density only for materials containing phrase \texttt{fuel} 
+            \end{itemize}
+        \item Plot quantities against burnup or days, for some or all isotopes
+        \item Read multiple files using \toapi{samplers}{serpentTools.samplers.depletion}{DepletionSampler} to obtain average quantities and uncertainties
+    \end{itemize}
+\end{frame}
+
+\subsection{Other Functionality}
+\begin{frame}{Other Functionality}
+    \begin{itemize}
+        \item \toapi{branching}{serpentTools.parsers.branching}{BranchingReader} capable of parsing output file
+        \item Bare-bones \toapi{history}{serpentTools.parsers.history}{HistoryReader} scrapes arrays from file
+        \item Read \toapi{parsers}{serpentTools.parsers}{depmtx} files containing isotopics and depletion matrices
+    \end{itemize}
+\end{frame}

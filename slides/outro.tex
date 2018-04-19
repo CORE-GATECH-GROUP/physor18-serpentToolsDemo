@@ -1,0 +1,61 @@
+% outro slides for beamer presentation
+\begin{frame}{References}
+    \bibliography{refs.bib}
+    \bibliographystyle{apalike}  
+\end{frame}
+
+\begin{frame}{Thank you!}
+    Questions?
+\end{frame}
+
+\appendix
+\backupbegin
+
+\subsection{Contributing}
+\begin{frame}{Contributing}
+    \begin{itemize}
+        \item Contributions are welcome!
+            \begin{itemize}
+                \item \href{https://serpent-tools.readthedocs.io/en/latest/develop/index.html}{Developer guide in docs}
+            \end{itemize}
+        \item Eager to expand the functionality to support other file types and \sss versions
+        \item Issues can be added to the \href{https://github.com/CORE-GATECH-GROUP/serpent-tools/issues}{Issue board}
+    \end{itemize}
+\end{frame}
+
+\subsection{User Control}
+\begin{frame}{User Control}
+    \begin{itemize}
+        \item Many readers support settings that control what data is stored
+        \item Select individual and/or group of results data
+        \item Full settings listed in documentation
+            \begin{itemize}
+                \item \href{http://serpent-tools.readthedocs.io/en/latest/settingsTop.html\#default-settings}{All default settings}
+                \item \href{http://serpent-tools.readthedocs.io/en/latest/variableGroupsTop.html}{Variable groups}
+            \end{itemize}
+        \item Examples in documentation
+            \begin{itemize}
+                \item \href{http://serpent-tools.readthedocs.io/en/latest/examples/Branching.html\#branching-settings}{Settings for BranchingReader}
+                \item \href{http://serpent-tools.readthedocs.io/en/latest/examples/DepletionReader.html\#depletion-settings}{Settings for DepletionReader}
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\subsection{Branching files}
+\begin{frame}{Branching file}
+    \begin{itemize}
+        \item Recent \sss versions create coefficient files from an automated burnup sequence 
+            \begin{itemize}
+                \item Vary physical properties such as materials, temperature, and soluble boron
+                \item Reaction cross sections and other group constants
+            \end{itemize}
+            \note[item]{21 MB file with 81 branch points - 9 BU and 9 variations}
+            \note[item]{Read in <10 micro seconds}
+        \begin{itemize}
+            \item Store cross sections and group constant data on \toapi{containers}{serpentTools.objects.containers}{HomogUniv} objects
+        \end{itemize}
+    \item Separate infinite-medium and leakage corrected values
+    \end{itemize}
+\end{frame}
+
+\backupend
